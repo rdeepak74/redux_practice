@@ -1,14 +1,14 @@
 // import { productList } from './productList'
 import { combineReducers, createStore } from 'redux'
 import cartReducer, {
-  CART_ADD_ITEM,
-  CART_DECREASE_ITEM_QUANTITY,
-  CART_INCREASE_ITEM_QUANTITY,
-  CART_REMOVE_ITEM,
+  addCartItem,
+  decreaseCartItem,
+  increaseCartItem,
+  removeCartItem,
 } from './cartReducer'
 import wishListReducer, {
-  WISHLIST_ADD_ITEM,
-  WISHLIST_REMOVE_ITEM,
+  addWishListItem,
+  removeWishListItem,
 } from './wishListReducer'
 import productReducer from './productReducer'
 
@@ -82,65 +82,22 @@ const reducer = combineReducers({
 const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__?.())
 console.log(store)
 
-store.dispatch({ type: CART_ADD_ITEM, payload: { productId: 1, quantity: 1 } })
-store.dispatch({ type: CART_ADD_ITEM, payload: { productId: 15, quantity: 3 } })
-store.dispatch({ type: CART_ADD_ITEM, payload: { productId: 16, quantity: 3 } })
-store.dispatch({
-  type: CART_ADD_ITEM,
-  payload: { productId: 12, quantity: 2 },
-})
-store.dispatch({ type: CART_REMOVE_ITEM, payload: { productId: 12 } })
-store.dispatch({
-  type: CART_INCREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_INCREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_INCREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_DECREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_DECREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_DECREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_DECREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_DECREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: CART_DECREASE_ITEM_QUANTITY,
-  payload: { productId: 16 },
-})
-store.dispatch({
-  type: WISHLIST_ADD_ITEM,
-  payload: { productId: 1, quantity: 1 },
-})
-store.dispatch({
-  type: WISHLIST_ADD_ITEM,
-  payload: { productId: 2, quantity: 1 },
-})
-store.dispatch({
-  type: WISHLIST_ADD_ITEM,
-  payload: { productId: 3, quantity: 1 },
-})
-store.dispatch({
-  type: WISHLIST_REMOVE_ITEM,
-  payload: { productId: 3 },
-})
-console.log(store.getState())
+// store.dispatch(addCartItem(15, 2))
+// store.dispatch(addCartItem(15, 3))
+// store.dispatch(addCartItem(16, 3))
+// store.dispatch(addCartItem(12, 2))
+// store.dispatch(removeCartItem(12))
+// store.dispatch(increaseCartItem(12))
+// store.dispatch(increaseCartItem(16))
+// store.dispatch(increaseCartItem(16))
+// store.dispatch(decreaseCartItem(16))
+// store.dispatch(decreaseCartItem(16))
+// store.dispatch(decreaseCartItem(16))
+// store.dispatch(decreaseCartItem(16))
+
+// store.dispatch(addWishListItem(1, 1))
+// store.dispatch(addWishListItem(2, 1))
+// store.dispatch(addWishListItem(3, 2))
+// store.dispatch(removeWishListItem(3))
+// console.log(store.getState())
 export default store
