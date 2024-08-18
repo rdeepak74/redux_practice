@@ -9,7 +9,7 @@ function Home() {
       {productList.map(({ id, title, rating, price, image }) => (
         <Product
           key={id}
-          id={id}
+          productId={id}
           title={title}
           rating={rating.rate}
           price={price}
