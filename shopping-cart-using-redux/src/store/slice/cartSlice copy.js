@@ -1,3 +1,5 @@
+import { createSlice } from '@reduxjs/toolkit'
+
 // Action Type
 const CART_ADD_ITEM = 'cart/addItem'
 const CART_REMOVE_ITEM = 'cart/removeItem'

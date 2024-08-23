@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { addCartItem } from '../store/cartReducer'
+import { addCartItem } from '../store/slice/cartSlice'
 
 export default function Product({ productId, title, rating, price, imageUrl }) {
   const dispatch = useDispatch()
@@ -26,7 +26,7 @@ export default function Product({ productId, title, rating, price, imageUrl }) {
         >
           Add to Cart
         </button>
-        <button>Buy Now</button>
+        <button>Add Wishlist</button>
       </div>
     </div>
   )
